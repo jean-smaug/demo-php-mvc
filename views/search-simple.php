@@ -1,4 +1,4 @@
-<form action="/search" method="get">
+<form action="/search-simple" method="get">
     <div class="col">
         <input type="text" class="form-control" name="search">
     </div>
