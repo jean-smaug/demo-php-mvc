@@ -7,7 +7,7 @@
         }
     },
     "scripts": {
-        "dev": "COMPOSER_PROCESS_TIMEOUT=3600 php -S 0.0.0.0:8000"
+        "dev": "php -S 0.0.0.0:8000"
     },
     "require": {}
 }

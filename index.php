@@ -7,7 +7,8 @@ $method = $_SERVER["REQUEST_METHOD"];
 
 $routes = [
     "GET" => [
-        "/" => [\App\Controller\HomeController::class, "index"]
+        "/" => [\App\Controller\HomeController::class, "index"],
+        "/about" => [\App\Controller\StaticController::class, "index"]
     ],
     "POST" => []
 ];
