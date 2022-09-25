@@ -11,7 +11,7 @@ class Database
     public function __construct()
     {
         if(Database::$database === null) {
-            Database::$database = new PDO("sqlite:".Config::SQLITE_PATH);
+            Database::$database = new \PDO("sqlite:".Config::SQLITE_PATH);
         }
     }
 
