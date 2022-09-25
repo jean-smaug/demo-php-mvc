@@ -5,13 +5,13 @@
         <li>
             <div class="Card">
                 <div class="Card__Image">
-                    <img src="elephant.jpeg" alt="">
+                    <img src="<?= $article["image"] ?>" alt="">
                 </div>
 
-                <h2 class="Card__Title"><?php echo $article["title"] ?></h2>
+                <h2 class="Card__Title"><?= $article["title"] ?></h2>
 
                 <p class="Card__Content">
-                    <?= $article["content"] ?>
+                    <?= substr($article["body"], -50 ) ?>
                 </p>
 
                 <a href="/article?id=<?= $article["id"] ?>">Voir l'article</a>

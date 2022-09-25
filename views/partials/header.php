@@ -13,6 +13,9 @@
             <a href="/search" class="nav-link <?= $pathname === "/search" ? "active" : "" ?>">Recherche</a>
         </li>
         <li class="nav-item">
+            <a href="/articles" class="nav-link <?= $pathname === "/articles" ? "active" : "" ?>">Articles</a>
+        </li>
+        <li class="nav-item">
             <a href="/login" class="nav-link <?= $pathname === "/login" ? "active" : "" ?>">Connexion</a>
         </li>
     </ul>
