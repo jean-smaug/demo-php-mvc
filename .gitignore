@@ -1,3 +1,5 @@
 .idea/
 node_modules/
 vendor/
+.parcel-cache/
+dist/
