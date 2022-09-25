@@ -1,0 +1,36 @@
+.List {
+    padding: 5px 0 20px 5px;
+    margin: 0;
+    display: flex;
+    overflow-x: scroll;
+    max-width: 100%;
+    list-style: none;
+}
+
+.List > li {
+    min-width: 400px;
+    margin: 0 5px;
+}
+
+.List > li:first-child {
+    margin-left: 0;
+}
+
+@media screen and (min-width: 720px) {
+    .List {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .List > li {
+        min-width: unset;
+        width: calc(100%/2 - 10px);
+        margin: 0 0 10px 0;
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    .List > li {
+        width: calc(100%/3 - 10px);
+    }
+}
