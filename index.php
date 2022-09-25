@@ -6,7 +6,9 @@ $pathname = $_SERVER["PATH_INFO"] ?? "/";
 $method = $_SERVER["REQUEST_METHOD"];
 
 $routes = [
-    "GET" => [],
+    "GET" => [
+        "/" => [\App\Controller\HomeController::class, "index"]
+    ],
     "POST" => []
 ];
 

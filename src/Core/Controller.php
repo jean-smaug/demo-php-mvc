@@ -19,6 +19,12 @@ abstract class Controller
         extract($variables);
 
         ob_start();
+        $viewFilePath = __DIR__ . "/../../views/$view.php";
+
+        if(file_exists($viewFilePath) === false) {
+            throw new \Error("Couldn't find $viewFilePath");
+        }
+
         require_once __DIR__ . "/../../views/$view.php";
         $content = ob_get_clean();
 
