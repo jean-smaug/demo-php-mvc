@@ -18,6 +18,12 @@ abstract class Controller
     {
         extract($variables);
 
+        // Variables accessible from view
+        // Not the better place
+        $pathname = $_SERVER["PATH_INFO"] ?? "/";
+        $environement = getenv("APP_ENV") ?? "development";
+        $assetsBaseUrl = $environement === "production" ? "/dist" : "http://localhost:1234";
+
         ob_start();
         $viewFilePath = __DIR__ . "/../../views/$view.php";
 

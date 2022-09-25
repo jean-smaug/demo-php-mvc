@@ -5,6 +5,7 @@
     "dev": "parcel assets/js/main.js"
   },
   "dependencies": {
+    "bootstrap": "^5.2.1",
     "parcel": "^2.7.0"
   }
 }
