@@ -9,8 +9,9 @@ abstract class Model
 
     public function __construct($table)
     {
+        $database = new Database();
+        $this->database = $database->getDatabase();
         $this->table = $table;
-        $this->database = require_once __DIR__ . "/../../config/database.php";
     }
 
     public function fetchAll()
