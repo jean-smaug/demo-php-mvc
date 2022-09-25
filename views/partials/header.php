@@ -7,6 +7,9 @@
             <a href="/about" class="nav-link <?= $pathname === "/about" ? "active" : "" ?>">À propos</a>
         </li>
         <li class="nav-item">
+            <a href="/search-simple" class="nav-link <?= $pathname === "/search-simple" ? "active" : "" ?>">Recherche simple</a>
+        </li>
+        <li class="nav-item">
             <a href="/search" class="nav-link <?= $pathname === "/search" ? "active" : "" ?>">Recherche</a>
         </li>
         <li class="nav-item">

@@ -18,7 +18,7 @@
 <body class="d-flex flex-column h-100">
     <?php require_once __DIR__ . "/../partials/header.php" ?>
 
-    <main class="flex-shrink-0">
+    <main class="flex-shrink-0 container">
         <?= $content ?? "Error: no content" ?>
     </main>
 
