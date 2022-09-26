@@ -10,6 +10,12 @@
     </div>
 </div>
 
+<div style="width: 110vw; height: 150px; background: dodgerblue; position: relative; transform: translateX(-20vw) skewY(3deg)">
+    <span class="position-absolute text-white fw-bold" style="transform: translate(-50%, -50%) skewY(-3deg); top: 50%; left: 50%; text-align: center;">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad animi delectus illo labore, minus molestiae sed suscipit voluptatibus.
+    </span>
+</div>
+
 <div class="container px-4 py-5" id="featured-3">
     <h2 class="pb-2 border-bottom">Programme</h2>
     <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">

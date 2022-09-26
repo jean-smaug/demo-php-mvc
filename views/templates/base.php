@@ -14,7 +14,7 @@
     <?php endif; ?>
 </head>
 
-<body class="d-flex flex-column h-100">
+<body class="d-flex flex-column h-100" style="overflow-x: hidden">
     <?php require_once __DIR__ . "/../partials/header.php" ?>
 
 
