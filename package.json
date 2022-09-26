@@ -2,7 +2,8 @@
   "author": "Maxime Blanc",
   "license": "ISC",
   "scripts": {
-    "dev": "parcel assets/js/main.js",
+    "dev": "parcel assets/js/main.js --hmr-host 0.0.0.0 --hmr-port 5000",
+    "build": "parcel build assets/js/main.js",
     "lint:css": "stylelint \"assets/**/*.css\""
   },
   "dependencies": {

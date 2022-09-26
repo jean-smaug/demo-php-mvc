@@ -1,2 +1,7 @@
 @import "Card.css";
 @import "List.css";
+
+/* Workaround for bootstrap anchors */
+a {
+  text-decoration: none !important;
+}
