@@ -2,7 +2,7 @@
 
 require_once 'vendor/autoload.php';
 
-$db = (new \App\Core\Database())->getDatabase();
+$db = $db = \App\Core\Database::getInstance();
 $faker = Faker\Factory::create();
 
 $stmt = $db->prepare("INSERT INTO articles(title, body, image) VALUES (:title, :body, :image)");

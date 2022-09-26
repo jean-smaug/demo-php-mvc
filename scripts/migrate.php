@@ -2,7 +2,9 @@
 
 require_once 'vendor/autoload.php';
 
-$db = (new \App\Core\Database())->getDatabase();
+use App\Core\Database;
+
+$db = Database::getInstance();
 
 $db->query("DROP TABLE IF EXISTS articles");
 

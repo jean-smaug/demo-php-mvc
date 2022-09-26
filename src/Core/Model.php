@@ -9,8 +9,7 @@ abstract class Model
 
     public function __construct($table)
     {
-        $database = new Database();
-        $this->database = $database->getDatabase();
+        $this->database = Database::getInstance();
         $this->table = $table;
     }
 

@@ -6,17 +6,14 @@ use App\Config;
 
 class Database
 {
-    private static $database;
+    private static $database = null;
 
-    public function __construct()
+    public static function getInstance()
     {
-        if(Database::$database === null) {
+        if(is_null(Database::$database)) {
             Database::$database = new \PDO("sqlite:".Config::SQLITE_PATH);
         }
-    }
 
-    public function getDatabase()
-    {
         return Database::$database;
     }
 }
