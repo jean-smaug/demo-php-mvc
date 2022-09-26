@@ -2,8 +2,7 @@
 
 require 'vendor/autoload.php';
 
-$pathname = $_SERVER["PATH_INFO"] ?? "/";
-$method = $_SERVER["REQUEST_METHOD"];
+$request = new \App\Core\Request();
 
 $routes = [
     "GET" => [
@@ -23,6 +22,8 @@ $routes = [
     ]
 ];
 
+$method = $request->getMethod();
+$pathname = $request->getPathname();
 $match = $routes[$method][$pathname] ?? null;
 
 if ($match === null) {
@@ -33,4 +34,5 @@ if ($match === null) {
 [$controllerClass, $action] = $match;
 
 $controller = new $controllerClass();
-$controller->$action();
+$controller->setRequest($request);
+$controller->$action($request);

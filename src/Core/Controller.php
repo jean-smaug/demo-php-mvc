@@ -5,6 +5,15 @@ namespace App\Core;
 abstract class Controller
 {
     private $template = "base";
+    private Request $request;
+
+    /**
+     * @param Request $request
+     */
+    public function setRequest(Request $request): void
+    {
+        $this->request = $request;
+    }
 
     /**
      * @param string $template
@@ -17,10 +26,10 @@ abstract class Controller
     public function render($view, $variables = [])
     {
         extract($variables);
+        extract($this->request->getInfos());
 
         // Variables accessible from view
         // Not the better place
-        $pathname = $_SERVER["PATH_INFO"] ?? "/";
         $environement = getenv("APP_ENV") ?? "development";
         $assetsBaseUrl = $environement === "production" ? "/dist" : "http://localhost:1234";
 
