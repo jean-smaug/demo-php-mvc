@@ -14,8 +14,13 @@ $routes = [
         "/search-simple" => [\App\Controller\SearchController::class, "indexSimple"],
         "/search" => [\App\Controller\SearchController::class, "index"],
         "/api/search" => [\App\Controller\SearchController::class, "search"],
+        "/login" => [\App\Controller\AuthController::class, "index"],
+        "/logout" => [\App\Controller\AuthController::class, "logout"],
+        "/admin" => [\App\Controller\AdminController::class, "index"],
     ],
-    "POST" => []
+    "POST" => [
+        "/login" => [\App\Controller\AuthController::class, "login"],
+    ]
 ];
 
 $match = $routes[$method][$pathname] ?? null;

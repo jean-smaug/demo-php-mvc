@@ -66,7 +66,7 @@
                 class="dropdown-menu dropdown-menu-dark text-small shadow"
                 aria-labelledby="dropdownUser1"
         >
-            <li><a class="dropdown-item" href="/sign-out">Deconnexion</a></li>
+            <li><a class="dropdown-item" href="/logout">Deconnexion</a></li>
         </ul>
     </div>
 </div>
