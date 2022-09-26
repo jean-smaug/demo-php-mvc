@@ -17,6 +17,8 @@ class AuthController extends Controller
         if($_POST["username"] === self::USERNAME && hash("sha256", $_POST["password"]) === self::PASSWORD_HASH) {
             $this->redirect("/admin");
         } else {
+            $this->request->session->addFlashMessage("error", "Identifiants invalides");
+
             $this->render("login");
         }
     }

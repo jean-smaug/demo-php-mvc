@@ -5,7 +5,7 @@ namespace App\Core;
 abstract class Controller
 {
     private $template = "base";
-    private Request $request;
+    protected Request $request;
 
     /**
      * @param Request $request
@@ -32,6 +32,7 @@ abstract class Controller
         // Not the better place
         $environement = getenv("APP_ENV") ?? "development";
         $assetsBaseUrl = $environement === "production" ? "/dist" : "http://localhost:1234";
+        $flash_messages = $this->request->session->getFlashMessages();
 
         ob_start();
         $viewFilePath = __DIR__ . "/../../views/$view.php";
@@ -44,6 +45,8 @@ abstract class Controller
         $content = ob_get_clean();
 
         require_once __DIR__ . "/../../views/templates/$this->template.php";
+
+        $this->request->session->clearFlashMessages();
     }
 
     public function json($data)

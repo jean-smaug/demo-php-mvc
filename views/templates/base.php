@@ -17,7 +17,20 @@
 <body class="d-flex flex-column h-100">
     <?php require_once __DIR__ . "/../partials/header.php" ?>
 
+
     <main class="flex-shrink-0 container">
+        <?php if(isset($flash_messages) && count($flash_messages) > 0): ?>
+            <div class="mb-5">
+                <?php foreach ($flash_messages as $flash_message): ?>
+                    <div class="card bg-danger text-white">
+                        <div class="card-body">
+                            <?= $flash_message["value"] ?>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        <?php endif; ?>
+
         <?= $content ?? "Error: no content" ?>
     </main>
 
