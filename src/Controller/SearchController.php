@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Core\Controller;
+use App\Core\Database;
 
 class SearchController extends Controller
 {
@@ -18,6 +19,12 @@ class SearchController extends Controller
 
     public function search()
     {
-        $this->json(["foo" => 123321]);
+        $search = $_GET["q"];
+        $db = Database::getInstance();
+        $results = $db
+            ->query("SELECT * FROM articles WHERE title LIKE '%$search%' OR body LIKE '%$search%'")
+            ->fetchAll(\PDO::FETCH_ASSOC);
+
+        $this->json($results);
     }
 }

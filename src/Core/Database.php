@@ -8,7 +8,7 @@ class Database
 {
     private static $database = null;
 
-    public static function getInstance()
+    public static function getInstance(): \PDO
     {
         if(is_null(Database::$database)) {
             Database::$database = new \PDO("sqlite:".Config::SQLITE_PATH);

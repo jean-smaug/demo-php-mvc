@@ -31,9 +31,4 @@ abstract class Model
             ->query("SELECT * FROM $this->table WHERE $key = $value")
             ->fetch(\PDO::FETCH_ASSOC);
     }
-
-    public function getDatabase()
-    {
-        return $this->database;
-    }
 }

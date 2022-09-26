@@ -3,3 +3,12 @@
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
 import "../css/main.css";
+
+(async ()  => {
+    switch (window.location.pathname) {
+        case "/search": {
+            await import("./search");
+            break;
+        }
+    }
+})()
