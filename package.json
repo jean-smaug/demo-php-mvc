@@ -2,7 +2,8 @@
   "author": "Maxime Blanc",
   "license": "ISC",
   "scripts": {
-    "dev": "parcel assets/js/main.js"
+    "dev": "parcel assets/js/main.js",
+    "lint:css": "stylelint \"assets/**/*.css\""
   },
   "dependencies": {
     "bootstrap": "^5.2.1",

@@ -1,7 +1,7 @@
 .Card {
   background: white;
   box-shadow: 0 2px 5px -2px #000;
-  font-family: "Avenir Next";
+  font-family: "Avenir Next", sans-serif;
   border-radius: 4px;
   cursor: pointer;
   overflow: hidden;
