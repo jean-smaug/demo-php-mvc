@@ -23,7 +23,7 @@ class SearchController extends Controller
         $db = Database::getInstance();
         $results = $db
             ->query("SELECT * FROM articles WHERE title LIKE '%$search%' OR body LIKE '%$search%'")
-            ->fetchAll(\PDO::FETCH_ASSOC);
+            ->fetchAll();
 
         $this->json($results);
     }
